@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "Greetings"
+version = "0.1.0"
+dependencies = [
+    "art",
+]
+
+[project.scripts]
+greet = "greetings.command:process"
+
+[tool.hatch.build.targets.wheel]
+packages = [
+  "src/greetings",
+]
