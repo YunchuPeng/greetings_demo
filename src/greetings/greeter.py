@@ -16,6 +16,16 @@ def greet(personal, family, title: str = "", polite: bool = False) -> str:
     -------
     str
         A complete greeting sentence.
+
+    Examples
+    --------
+    >>> from greetings.greeter import greet
+    >>> greet("Terry", "Jones")
+    'Hey, Terry Jones.'
+    >>> greet("Graham", "Chapman", polite=True)
+    'How do you do, Graham Chapman.'
+    >>> greet("Michael", "Palin", title="CBE")
+    'Hey, CBE Michael Palin.'
     """
     greeting = "How do you do, " if polite else "Hey, "
     if title:
